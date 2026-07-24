@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react'
 import ProfileButton from './ProfileButton'
+import BottomNav from './BottomNav'
 
 /**
  * Renders its children inside an iPhone-style bezel so every mockup screen
@@ -34,6 +35,9 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
           <div className="screen-scroll h-full w-full overflow-y-auto pt-11">
             {children}
           </div>
+
+          {/* Bottom tab bar (pinned to the screen, shown on main tabs) */}
+          <BottomNav />
         </div>
       </div>
     </div>

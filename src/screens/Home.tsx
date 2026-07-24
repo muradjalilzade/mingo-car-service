@@ -141,28 +141,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom nav (visual) */}
-      <div className="fixed bottom-0 left-1/2 z-30 w-[366px] -translate-x-1/2 rounded-b-[2.3rem] border-t border-slate-100 bg-white/95 px-8 pb-5 pt-3 backdrop-blur">
-        <div className="flex items-center justify-between text-[10px] font-medium">
-          {[
-            { icon: '🏠', key: 'nav.home', active: true, to: '/home' },
-            { icon: '📅', key: 'nav.bookings', active: false },
-            { icon: '🚗', key: 'nav.cars', active: false },
-            { icon: '👤', key: 'nav.profile', active: false, to: '/profile' },
-          ].map((item) => (
-            <button
-              key={item.key}
-              onClick={() => item.to && navigate(item.to)}
-              className={`flex flex-col items-center gap-1 ${
-                item.active ? 'text-brand-600' : 'text-slate-400'
-              }`}
-            >
-              <span className="text-lg">{item.icon}</span>
-              {t(item.key)}
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
